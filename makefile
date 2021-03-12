@@ -23,7 +23,7 @@ scan.o: scan.c scan.h util.h globals.h
 	$(CC) $(CFLAGS) -c scan.c
 
 parse.o: parse.c parse.h scan.h globals.h util.h
-	$(CC) $(CFLAGS) -c parse.c
+	$(CC) $(CFLAGS) -fno-builtin-exp -c parse.c
 
 symtab.o: symtab.c symtab.h
 	$(CC) $(CFLAGS) -c symtab.c
