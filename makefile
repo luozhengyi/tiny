@@ -40,12 +40,10 @@ cgen.o: cgen.c globals.h symtab.h code.h cgen.h
 clean:
 	rm -f tiny.exe tm.exe main.o util.o scan.o parse.o symtab.o analyze.o code.o cgen.o tm.o
 
-tm.exe: tm.c
-	$(CC) -o $@ $(CFLAGS) tm.c
-
 tiny: tiny.exe
 
-tm: tm.exe
+tm:
+	$(CC) -o tm.exe tm.c
 
 all: tiny tm
 
